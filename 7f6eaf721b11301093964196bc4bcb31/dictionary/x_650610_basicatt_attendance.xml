@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Attendance" max_length="40" name="x_650610_basicatt_attendance" type="collection">
+    <element label="Attendance" max_length="40" name="x_650610_basicatt_attendance" sizeclass="3" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" label="Event" max_length="60" name="event" type="string">
             <choice>
                 <element inactive_on_update="false" label="Enable Townhall" sequence="0" value="enable_townhall"/>

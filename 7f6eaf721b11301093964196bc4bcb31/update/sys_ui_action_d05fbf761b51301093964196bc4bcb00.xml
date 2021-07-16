@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Check for duplicate</name>
+        <onclick>onClick_d05fbf761b51301093964196bc4bcb00()</onclick>
+        <order>100</order>
+        <script><![CDATA[function onClick_d05fbf761b51301093964196bc4bcb00() {
+	
+	var user_id = g_form.getValue('user');
+	var event = g_form.getValue('event');
+	
+	var ga = new GlideAjax("Events");
+	ga.addParam('sysparm_name', 'user_event_exists');
+	ga.addParam('p_user_id', user_id);
+	ga.addParam('p_event', event);
+	ga.addParam('sysparm_scope', 'x_650610_basicatt');
+	
+	ga.getXMLAnswer(function(r) {
+		alert(r);
+	});
+	
+};]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>false</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-16 10:32:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d05fbf761b51301093964196bc4bcb00</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Check for duplicate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Basic Attendance" source="x_650610_basicatt">7f6eaf721b11301093964196bc4bcb31</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Basic Attendance">7f6eaf721b11301093964196bc4bcb31</sys_scope>
+        <sys_update_name>sys_ui_action_d05fbf761b51301093964196bc4bcb00</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-16 10:42:54</sys_updated_on>
+        <table>x_650610_basicatt_attendance</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
